@@ -28,7 +28,6 @@ export async function POST(request: NextRequest) {
       }
       return NextResponse.json({ error: "Invalid username or password." }, { status: 401 });
     }
-    return NextResponse.json({ error: "The username or password is incorrect." }, { status: 401 });
 
   resetFailedLogins(identity);
   const response = NextResponse.json({ authenticated: true });
