@@ -7,7 +7,7 @@ import type { Property, PropertyInput } from "@/lib/types";
 
 const sampleProperties: PropertyInput[] = [];
 
-const dbDir = path.join(process.cwd(), "data");
+const dbDir = process.env.VERCEL ? path.join("/tmp", "data") : path.join(process.cwd(), "data");
 mkdirSync(dbDir, { recursive: true });
 const dbPath = path.join(dbDir, "murugan.sqlite");
 
