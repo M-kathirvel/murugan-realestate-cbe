@@ -19,5 +19,5 @@ export async function POST(request: NextRequest) {
   }
   const property = parsePropertyInput(input);
   if (!property) return NextResponse.json({ error: "Check the property details and try again." }, { status: 400 });
-  return NextResponse.json(insertProperty(property), { status: 201 });
+ return NextResponse.json(createProperty(property), { status: 201 });
 }
