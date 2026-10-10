@@ -4,7 +4,7 @@ import { randomUUID } from "node:crypto";
 import path from "node:path";
 import { hasAdminSession } from "@/lib/admin-auth";
 
-export const runtime = "nodejs";
+ //export const runtime = "nodejs";
 
 const allowedTypes: Record<string, string> = {
   "image/jpeg": "jpg",
